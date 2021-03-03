@@ -29,7 +29,7 @@ let package = Package(
         .target(
             name: "apikey_xcmetrics_app",
             dependencies: ["apikey_xcmetrics"]
-        )
+        ),
         .testTarget(
             name: "apikey_xcmetricsTests",
             dependencies: ["apikey_xcmetrics"]
