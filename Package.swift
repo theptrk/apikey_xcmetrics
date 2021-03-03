@@ -5,13 +5,10 @@ import PackageDescription
 
 let package = Package(
     name: "apikey_xcmetrics",
-    dependencies: [
+    platforms: [
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
         .macOS(.v10_15),
-    ],
-    products: [
-        .executable(name: "apikey_xcmetrics", targets: ["apikey_xcmetrics_app"]),
     ],
     dependencies: [
          .package(url: "https://github.com/spotify/XCMetrics", from: "0.1.0"),
@@ -29,8 +26,10 @@ let package = Package(
         .target(
             name: "apikey_xcmetrics_app",
             dependencies: ["apikey_xcmetrics"]
+        )
         .testTarget(
             name: "apikey_xcmetricsTests",
-            dependencies: ["apikey_xcmetrics"]),
+            dependencies: ["apikey_xcmetrics"]
+        ),
     ]
 )
