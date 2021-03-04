@@ -11,7 +11,7 @@ let package = Package(
         .macOS(.v10_15),
     ],
     products: [
-        .executable(name: "apikey_xcmeterics", targets: ["apikey_xcmeterics_app"]),
+        .executable(name: "apikey_xcmetrics", targets: ["apikey_xcmetrics_app"]),
     ],
     dependencies: [
          .package(url: "https://github.com/spotify/XCMetrics", from: "0.1.0"),
